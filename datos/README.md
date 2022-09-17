@@ -18,4 +18,6 @@ los datos fueron obtenidos del sitio del banco mundial en el caso de la variable
 
 de la pagina gapminder en el caso de `esperanza de vida` y `poblacion`, los archivos utilizados
 
-se encuentran en `datos/sin-procesar`
+se encuentran en `datos/sin-procesar.`
+
+el codigo que se uso para este set de datos se encuentra en `codigos/13-9-limpieza-de-datos.R`
