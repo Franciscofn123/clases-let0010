@@ -16,4 +16,6 @@ este set tiene 7 variables
 
 los datos fueron obtenidos del sitio del banco mundial en el caso de la variable `pib` y
 
-de la pagina gapminder en el caso de `esperanza de vida` y `poblacion`
+de la pagina gapminder en el caso de `esperanza de vida` y `poblacion`, los archivos utilizados
+
+se encuentran en `datos/sin-procesar`
