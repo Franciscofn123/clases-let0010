@@ -4,6 +4,8 @@
 
 # Activar los paquetes que vamos a utilizar ----
 
+install.packages("ggplot2")
+
 
 library(readxl)
 library(readr)

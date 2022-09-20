@@ -1,0 +1,44 @@
+---
+title: "Mi primer documento en Quarto"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## podemos escribir texto directamente del editor, y lo podemos formatear: negrita, cursiva y como codigo. Tambien se puede usar latex
+
+$$
+\sin^2 x + \cos^2 x = 1
+$$
+
+y se pueden agregar codigos
+
+```{r}
+#| message: false
+library(readr)
+library(dplyr)
+library(ggplot2)
+
+desarrollo <- read_csv("https://raw.githubusercontent.com/rivaquiroga/datos-de-ejemplo/main/cl_2000-2019.csv")
+```
+
+Estos son datos sobre Chile para las variables población, pib per cápita y esperanza de vida entre los años 2000 y 2019.
+
+```{r}
+ggplot(desarrollo, aes(x = anio, y = pib)) +
+  geom_line() +
+  scale_y_continuous(limits = c(0, 15000))
+```
+
+Los datos del último año son los siguientes:
+
+```{r}
+desarrollo |> 
+  filter(anio == 2019) |> 
+  select("esperanza de vida" = esperanza_vida, pib, "población" = poblacion) |> 
+  knitr::kable()
+```
+
+\
+\
